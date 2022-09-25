@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { TestWatcher } = require("jest");
+
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
@@ -79,6 +81,16 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  yes=false;
+  for(i=0;i<array.length;i++)
+  {
+    if(array[i]===elemento)
+    {
+      yes=true;
+      return yes;
+    }
+  }
+  return yes;
 }
 
 
@@ -86,6 +98,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  sum=0;
+  for(i=0;i<numeros.length;i++)
+  {
+    sum+=numeros[i];
+  }
+  return sum;
 }
 
 
@@ -93,6 +111,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  sum=0;
+  for(i=0;i<resultadosTest.length;i++)
+  {
+    sum+=resultadosTest[i];
+  }
+  return sum/resultadosTest.length;
 }
 
 
@@ -100,6 +124,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  mayor=numeros[1]
+  for(i=1;i<numeros.length;i++)
+  {
+    if(numeros[i]>mayor)
+    {
+      mayor=numeros[i];
+    }
+  }
+  return mayor;
 }
 
 
@@ -107,6 +140,7 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  
 }
 
 
